@@ -149,13 +149,13 @@ cellView.listenTo(paper, {
 } as joint.dia.Paper.EventMap);
 
 class AttributeHighlighterView extends joint.dia.HighlighterView<{ attribute: string; }> {
-    preinitialize() {
+    override preinitialize() {
         this.UPDATE_ATTRIBUTES = function() { return [this.options.attribute]; };
     }
 }
 
 class MyList<I extends number> extends joint.highlighters.list<I> {
-    protected createListItem(item: I): SVGElement {
+    protected override createListItem(item: I): SVGElement {
         const vel = joint.V('text');
         vel.text(`${item + 1}`);
         return vel.node;
@@ -200,12 +200,11 @@ new joint.shapes.standard.Rectangle({
 });
 
 class MyElement extends joint.dia.Element {
-
     test() {
         return true;
     }
 
-    static attributes = {
+    static override attributes = {
         'empty-attribute': {},
         'set1-attribute': {
             set: 'alias',

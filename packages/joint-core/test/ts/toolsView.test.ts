@@ -39,15 +39,15 @@ interface RadiusControlOptions extends elementTools.Control.Options {
 }
 class RadiusControl extends elementTools.Control<RadiusControlOptions> {
 
-    protected getPosition(view: dia.ElementView): dia.Point {
+    protected override getPosition(view: dia.ElementView): dia.Point {
         return { x: 0, y: view.model.get('test') || 0 };
     }
 
-    protected setPosition(view: dia.ElementView, coordinates: dia.Point): void {
+    protected override setPosition(view: dia.ElementView, coordinates: dia.Point): void {
         view.model.set('test', coordinates.y);
     }
 
-    protected resetPosition(view: dia.ElementView): void {
+    protected override resetPosition(view: dia.ElementView): void {
         view.model.set('test', 0);
     }
 }

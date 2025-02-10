@@ -24,9 +24,10 @@
         // 'strict' options **End**
         "forceConsistentCasingInFileNames": true,
         "noImplicitReturns": true,
-        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitOverride": true,
         "noUnusedLocals": false,
         "skipLibCheck": false,
+        "noEmit": true,
         "types": [],
     }
 }
