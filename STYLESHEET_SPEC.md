@@ -71,13 +71,14 @@ TBD
 
 | Preview | Variable | Value | Description |
 |---------|----------|-------|-------------|
-| <span style="display:inline-block;width:16px;height:16px;background:#ffffff;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `link-label-background` | `#ffffff` | Label background rect fill |
+| <span style="display:inline-block;width:16px;height:16px;background:#ffffff;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `link-label-background-color` | `#ffffff` | Label background rect fill |
 | <span style="display:inline-block;width:16px;height:16px;background:#495057;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `link-label-color` | `#495057` | Label text color |
 | | `link-label-font-size` | `14px` | Label font size |
 | | `link-label-font-family` | `Arial, sans-serif` | Label font family |
 | | `link-label-background-padding` | `2px 4px` | Label text padding |
-
-TODO: more label properties
+| <span style="display:inline-block;width:16px;height:16px;background:#495057;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `link-label-border-color` | `#495057` | Label border color |
+| | `link-label-border-width` | `1px` | Label border width |
+| | `link-label-border-radius` | `2px` | Label border radius |
 
 ---
 
@@ -99,8 +100,10 @@ Ports on elements.
 |---------|----------|-------|-------------|
 | <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `port-body-hover-color` | `#2f9e44` | Fill when hovered (connectable) |
 | <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `port-body-border-hover-color` | `#2f9e44` | Fill when hovered (connectable) |
+| | `port-body-hover-border-width` | `2px` | Border width when hovered (connectable) |
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `port-body-connecting-color` | `#1971c2` | Fill when a link is in the process of connecting |
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `port-body-border-connecting-color` | `#1971c2` | Fill when a link is in the process of connecting |
+| | `port-body-connecting-border-width` | `2px` | Border width when a link is in the process of connecting |
 
 ### Label
 
@@ -125,6 +128,7 @@ A dashed rectangle outline drawn around the bounding box of a selected shape.
 | <span style="display:inline-block;width:16px;height:16px;background:#33334F;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tool-boundary-color` | `#33334F` | Boundary rect stroke color |
 | | `tool-boundary-width` | `0.5` | Boundary rect stroke width |
 | | `tool-boundary-pattern` | `5, 5` | Boundary rect dash pattern |
+| | `tool-boundary-border-radius` | `4` | Boundary rect corner radius |
 | | `tool-boundary-padding` | `10` | Padding between shape bbox and boundary rect |
 
 ### Control
@@ -139,6 +143,9 @@ A draggable circular handle used for custom element controls (e.g. corner-radius
 | | `tool-control-radius` | `6` | Handle circle radius |
 | <span style="display:inline-block;width:16px;height:16px;background:#33334F;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tool-control-extras-color` | `#33334F` | Extras (reference) rect stroke shown while dragging |
 | | `tool-control-extras-pattern` | `2, 4` | Extras rect dash pattern |
+| | `tool-control-extras-width` | `1` | Extras rect stroke width |
+| | `tool-control-extras-radius` | `4` | Extras rect corner radius |
+| | `tool-control-extras-padding` | `4` | Padding between target sub-element bbox and extras rect |
 
 ## Link Tools
 
@@ -155,7 +162,9 @@ Draggable handle at the source or target endpoint of a link. Shows a filled circ
 | | `tool-anchor-border-width` | `2` | Default anchor stroke width |
 | | `tool-anchor-radius` | `6` | Default anchor circle radius |
 | <span style="display:inline-block;width:16px;height:16px;background:#33334F;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tool-anchor-area-border-color` | `#33334F` | Restriction area rect stroke (shown during drag) |
+| | `tool-anchor-area-border-width` | `1` | Restriction area rect stroke width |
 | | `tool-anchor-area-border-pattern` | `2, 4` | Restriction area rect dash pattern |
+| | `tool-anchor-area-border-radius` | `4` | Restriction area rect corner radius |
 
 ### Arrowhead
 
@@ -206,13 +215,23 @@ The minimap panel.
 | <span style="display:inline-block;width:16px;height:16px;background:#ced4da;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `navigator-viewport-border-color` | `#ced4da` | Navigator viewport border color |
 | | `navigator-viewport-border-width` | `1px` | Navigator viewport border width |
 | | `navigator-viewport-border-pattern` | `none` | Navigator viewport border dash pattern |
+| | `navigator-viewport-border-radius` | `2px` | Navigator viewport border radius |
 | <span style="display:inline-block;width:16px;height:16px;background:#ced4da;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `navigator-default-link-color` | `#ced4da` | Navigator default link color |
 | | `navigator-default-link-width` | `1px` | Navigator default link width |
 | <span style="display:inline-block;width:16px;height:16px;background:#ced4da;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `navigator-default-element-color` | `#ced4da` | Navigator default element color |
 | <span style="display:inline-block;width:16px;height:16px;background:#ced4da;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `navigator-default-element-border-color` | `#ced4da` | Navigator default element border color |
 | | `navigator-default-element-border-width` | `1px` | Navigator default element border width |
+| | `navigator-default-element-border-radius` | `2px` | Navigator default element border radius |
 
 ---
+
+## Stencil
+
+The stencil panel and interactions.
+
+| Preview | Variable | Value | Description |
+|---------|----------|-------|-------------|
+| | `stencil-drag-opacity` | `0.7` | Opacity of stencil items when dragging |
 
 ## Selection
 
@@ -222,15 +241,18 @@ Multi and single selection box and handles.
 |---------|----------|-------|-------------|
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `selection-wrapper-color` | `#1971c2` | Multiple selection bounding box color |
 | | `selection-wrapper-width` | `1.5px` | Multiple selection bounding box width |
+| | `selection-wrapper-border-radius` | `4px` | Multiple selection bounding box border radius |
 | | `selection-wrapper-pattern` | `none` | Selection border dash pattern |
 | | `selection-wrapper-padding` | `5` | Padding between combined bbox and selection wrapper |
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `selection-frame-color` | `#1971c2` | Shape selection bounding box color |
 | | `selection-frame-width` | `1.5px` | Shape selection bounding box width |
+| | `selection-frame-border-radius` | `4px` | Shape selection bounding box border radius |
 | | `selection-frame-pattern` | `none` | Shape selection border dash pattern |
 | | `selection-frame-padding` | `5` | Padding between shape bbox and selection frame |
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `selection-lasso-fill-color` | `#1971c2` | Selection lasso fill color |
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `selection-lasso-border-color` | `#1971c2` | Selection lasso border color |
 | | `selection-lasso-border-width` | `1.5px` | Selection lasso border width |
+| | `selection-lasso-border-radius` | `4px` | Selection lasso border radius |
 | | `selection-lasso-border-pattern` | `none` | Selection lasso border dash pattern |
 
 ---
@@ -252,7 +274,11 @@ Snaplines styles
 
 ## Halo
 
-TBD
+Halo styles for element highlighting.
+
+| Preview | Variable | Value | Description |
+|---------|----------|-------|-------------|
+| | `halo-padding` | `6px` | Halo padding |
 
 ---
 
@@ -281,16 +307,33 @@ Free transform handles and bounding box. Here all sizes are in HTML pixels (not 
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `free-transform-handle-active-background-color` | `#1971c2` | Free transform handle background color when active (dragged) |
 | <span style="display:inline-block;width:16px;height:16px;background:#1971c2;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `free-transform-handle-active-border-color` | `#1971c2` | Free transform handle border color when active (dragged) |
 
-## Icons
+## Stack Layout
 
-- Rotate
-- Resize
-- Remove
-- Fork
-- Connect
-- Clone
-- Clone and connect
-- Break connections
+| Preview | Variable | Value | Description |
+|---------|----------|-------|-------------|
+| <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `stack-layout-preview-color` | `#2f9e44` | Color of a stack layout preview position |
+| | `stack-layout-preview-width` | `2px` | Border width of a stack layout preview position |
+| <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `stack-layout-preview-invalid-color` | `red` | Color of a stack layout invalid preview position |
+| | `stack-layout-preview-invalid-width` | `2px` | Border width of a stack layout invalid preview position |
+| | `stack-layout-drag-opacity` | `0.7` | Opacity of a stack layout element when being dragged |
+
+## Tree Layout
+
+| Preview | Variable | Value | Description |
+|---------|----------|-------|-------------|
+| | `tree-layout-preview-opacity` | `0.5` | Opacity of a tree layout preview background |
+| <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tree-layout-preview-background-color` | `#2f9e44` | Color of a tree layout preview background |
+| <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tree-layout-preview-border-color` | `#2f9e44` | Color of a tree layout preview border |
+| | `tree-layout-preview-border-width` | `2px` | Border width of a tree layout preview |
+| | `tree-layout-preview-border-radius` | `4px` | Border radius of a tree layout preview |
+| | `tree-layout-preview-border-pattern` | `none` | Border dash pattern of a tree layout preview |
+| <span style="display:inline-block;width:16px;height:16px;background:red;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tree-layout-preview-invalid-border-color` | `red` | Color of a tree layout invalid preview border |
+| <span style="display:inline-block;width:16px;height:16px;background:red;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tree-layout-preview-invalid-background-color` | `red` | Color of a tree layout invalid preview background |
+| <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tree-layout-parent-highlight-background-color` | `#2f9e44` | Color of parent highlight background when previewing a tree layout position |
+| <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `tree-layout-parent-highlight-border-color` | `#2f9e44` | Color of parent highlight border when previewing a tree layout position |
+| | `tree-layout-parent-highlight-border-width` | `2px` | Border width of parent highlight when previewing a tree layout position |
+| | `tree-layout-parent-highlight-border-radius` | `4px` | Border radius of parent highlight when previewing a tree layout position |
+| | `tree-layout-parent-highlight-border-pattern` | `none` | Border dash pattern of parent highlight when previewing a tree layout position |
 
 ## Interactions
 
@@ -303,4 +346,15 @@ Free transform handles and bounding box. Here all sizes are in HTML pixels (not 
 | <span style="display:inline-block;width:16px;height:16px;background:#2f9e44;border:1px solid #ccc;border-radius:2px;vertical-align:middle"></span> | `interactions-embedding-container-highlighter-color` | `#2f9e44` | Color of container element highlighter when embedding |
 | | `interactions-embedding-container-highlighter-width` | `2px` | Border width of container element highlighter when embedding |
 | | `interactions-embedding-container-highlighter-pattern` | `none` | Border dash pattern of container element highlighter when embedding |
+| | `interactions-embedding-container-highlighter-padding` | `2px` | Padding of container element highlighter when embedding |
 
+## Icons
+
+- Rotate
+- Resize
+- Remove
+- Fork
+- Connect
+- Clone
+- Clone and connect
+- Break connections
