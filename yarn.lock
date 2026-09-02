@@ -6694,6 +6694,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@joint/layout-elk@workspace:packages/joint-layout-elk":
+  version: 0.0.0-use.local
+  resolution: "@joint/layout-elk@workspace:packages/joint-layout-elk"
+  dependencies:
+    "@joint/core": "workspace:~"
+    "@joint/eslint-config": "workspace:*"
+    "@rollup/plugin-node-resolve": "npm:^16.0.1"
+    "@rollup/plugin-terser": "npm:^0.4.4"
+    "@rollup/plugin-typescript": "npm:^12.1.1"
+    concurrently: "npm:^9.2.0"
+    elkjs: "npm:^0.11.0"
+    eslint: "npm:9.39.2"
+    karma: "npm:^6.4.2"
+    karma-chrome-launcher: "npm:^3.2.0"
+    karma-coverage: "npm:^2.2.1"
+    karma-qunit: "npm:^4.1.2"
+    karma-sourcemap-loader: "npm:^0.4.0"
+    puppeteer: "npm:24.22.0"
+    qunit: "npm:^2.24.1"
+    rollup: "npm:4.36.0"
+    rollup-plugin-banner2: "npm:^1.2.2"
+    typescript: "npm:^5.7.3"
+  peerDependencies:
+    elkjs: ^0.11.0
+  languageName: unknown
+  linkType: soft
+
 "@joint/layout-msagl@workspace:^, @joint/layout-msagl@workspace:packages/joint-layout-msagl":
   version: 0.0.0-use.local
   resolution: "@joint/layout-msagl@workspace:packages/joint-layout-msagl"
